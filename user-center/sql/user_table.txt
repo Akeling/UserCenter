@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user`
+(
+    id    BIGINT      NOT NULL COMMENT '主键ID',
+    name  VARCHAR(30) NULL DEFAULT NULL COMMENT '姓名',
+    age   INT         NULL DEFAULT NULL COMMENT '年龄',
+    email VARCHAR(50) NULL DEFAULT NULL COMMENT '邮箱',
+    PRIMARY KEY (id)
+);
+
+DELETE
+FROM `user`;
+
+INSERT INTO `user` (id, name, age, email)
+VALUES (1, 'Jone', 18, 'test1@baomidou.com'),
+       (2, 'Jack', 20, 'test2@baomidou.com'),
+       (3, 'Tom', 28, 'test3@baomidou.com'),
+       (4, 'Sandy', 21, 'test4@baomidou.com'),
+       (5, 'Billie', 24, 'test5@baomidou.com');
+
+
+-- auto-generated definition
+create table user
+(
+    id           bigint auto_increment
+        primary key,
+    userAccount  varchar(256)                       null comment '账号
+',
+    username     varchar(256)                       null comment '昵称',
+    avatarUrl    varchar(1024)                      null comment '头像
+',
+    gender       tinyint                            null comment '性别',
+    userPassword varchar(128)                       null comment '用户密码',
+    phone        varchar(128)                       null comment '电话
+',
+    email        varchar(128)                       null comment '邮箱
+',
+    userStatus   tinyint                            null comment '用户状态
+',
+    createTime   datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    updateTime   datetime default CURRENT_TIMESTAMP not null comment '更新时间',
+    isDelete     tinyint  default 0                 null comment '是否删除'
+);
+
