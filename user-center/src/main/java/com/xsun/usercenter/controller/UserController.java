@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
 import static com.xsun.usercenter.constant.UserConstant.ADMIN_ROLE;
 import static com.xsun.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 
+/**
+ * xsun
+ */
 @RestController
 @RequestMapping("/user")
 public class UserController {
